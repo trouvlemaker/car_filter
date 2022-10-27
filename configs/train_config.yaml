@@ -1,0 +1,21 @@
+sodaflow:
+  dataset_path:
+    - "/datasets/kaflix-filter-dataset"
+  start_ckpt_path: "./trained_model"
+  test_model_path: "./export"
+
+train_inputs:
+  MODEL_NAME: "DenseNet169"
+  INPUT_SIZE: [224, 224, 3]
+  NUM_CLASSES: 3
+  BATCH_SIZE: 16
+  NUM_EPOCHS: 2
+  LEARNING_RATE: 1e-5
+eval_inputs:
+  INPUT_SIZE: [224, 224, 3]
+  NUM_CLASSES: 3
+  BATCH_SIZE: 32
+
+MODEL_OUTPUT_DIR: "./export"
+LOGS_DIR: "./logs"
+EVAL_OUT: "./eval_out"
